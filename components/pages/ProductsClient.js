@@ -22,7 +22,7 @@ export default function ProductsClient() {
         description={intro}
         ctaText="Get Quote"
         ctaLink="/contact"
-        imageUrl="https://images.unsplash.com/photo-1558618047-3c8c76ca575b?w=800&h=600&fit=crop"
+        imageUrl="/st1.jpg"
       />
 
       <article className="bg-white">

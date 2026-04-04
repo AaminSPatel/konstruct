@@ -10,11 +10,13 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { branding, navigation } = useSite();
 
-  const navItems = navigation ? navigation.map(name => ({
+  const navItems = navigation ? navigation.map(name => {
+  const isHome = name.trim().toLowerCase() === 'home';
+  return {
     name,
-    href: '/' + name.toLowerCase()
-  })) : [{ name: 'Home', href: '/' }];
-
+    href: isHome ? '/' : '/' + name.toLowerCase().replace(/\s+/g, '-') // replace spaces with hyphen for safety
+  };
+}) : [{ name: 'Home', href: '/' }];
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (

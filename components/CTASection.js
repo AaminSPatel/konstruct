@@ -66,7 +66,7 @@ export default function CTASection() {
               <motion.button
                 whileHover={{ scale: 1.05, x: 5 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full flex items-center justify-center gap-2 bg-white text-safety-orange hover:bg-off-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl"
+                className="w-full flex items-center justify-center gap-2 bg-white text-orange-500 hover:bg-off-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl"
               >
                 Get Your Quote
                 <FaArrowRight className="text-sm" />

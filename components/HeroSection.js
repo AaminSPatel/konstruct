@@ -85,7 +85,7 @@ export default function HeroSection({ title, subtitle, description, ctaText = 'G
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-orange-500 px-8 py-4 rounded-lg font-bold text-lg transition-all"
+                className="flex items-center gap-2 border-2 border-gray-900 text-white hover:bg-gray-900 hover:text-orange-500 px-8 py-4 rounded-lg font-bold text-lg transition-all"
               >
                 Learn More
               </motion.button>
@@ -98,7 +98,7 @@ export default function HeroSection({ title, subtitle, description, ctaText = 'G
             className="relative w-full h-96 md:h-full md:min-h-[500px] rounded-lg overflow-hidden shadow-2xl"
           >
             <Image
-              src={'/st3.jpg' || 'https://images.unsplash.com/photo-1503387762519-52582191664730-d307ca884978?w=600&h=800&fit=crop'}
+              src={  imageUrl ||'/st3.jpg' || 'https://images.unsplash.com/photo-1503387762519-52582191664730-d307ca884978?w=600&h=800&fit=crop'}
               alt={title}
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"

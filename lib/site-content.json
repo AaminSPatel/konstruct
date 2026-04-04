@@ -11,7 +11,11 @@
     "email": "hr.konstructindore@gmail.com / info.konstructconstruction@gmail.com",
     "website": "https://www.konstruct.co.in",
     "hours": "Monday - Saturday: 9:00 AM - 6:00 PM",
-    "socialLinks": { "linkedin": "", "twitter": "", "facebook": "" }
+    "socialLinks": { 
+      "linkedin": "", 
+      "twitter": "", 
+      "facebook": "" 
+    }
   },
   "navigation": ["Home", "About", "Services", "Projects", "Contact"],
   "pages": {
@@ -24,44 +28,20 @@
       "heroDescription": "Konstruct Technofab Pvt. Ltd. specializes in designing, manufacturing and installing high quality pre engineered buildings, industrial sheds and prefabricated structures. Established in 2017 with 200+ employees serving worldwide markets (GST: 23ARFPV2038P1ZD).",
       "ctaText": "Get Quote",
       "features": [
-        {
-          "title": "Fast construction",
-          "description": "Quick assembly reduces project timelines significantly."
-        },
-        {
-          "title": "Cost effective",
-          "description": "Optimized design and materials minimize overall project costs."
-        },
-        {
-          "title": "Durable steel structure",
-          "description": "High-grade steel ensures long-lasting performance."
-        },
-        {
-          "title": "Custom design",
-          "description": "Tailored solutions matching exact project requirements."
-        },
-        {
-          "title": "Weather resistant",
-          "description": "Advanced coatings protect against harsh conditions."
-        },
-        {
-          "title": "Low maintenance",
-          "description": "Minimal upkeep required throughout service life."
-        },
-        {
-          "title": "Strong load capacity",
-          "description": "Engineered for heavy industrial loads and spans."
-        },
-        {
-          "title": "High structural safety",
-          "description": "Meets and exceeds all international standards."
-        }
+        {"title": "Fast construction", "description": "Quick assembly reduces project timelines significantly."},
+        {"title": "Cost effective", "description": "Optimized design and materials minimize overall project costs."},
+        {"title": "Durable steel structure", "description": "High-grade steel ensures long-lasting performance."},
+        {"title": "Custom design", "description": "Tailored solutions matching exact project requirements."},
+        {"title": "Weather resistant", "description": "Advanced coatings protect against harsh conditions."},
+        {"title": "Low maintenance", "description": "Minimal upkeep required throughout service life."},
+        {"title": "Strong load capacity", "description": "Engineered for heavy industrial loads and spans."},
+        {"title": "High structural safety", "description": "Meets and exceeds all international standards."}
       ]
     },
     "about": {
       "title": "About Konstruct Technofab Pvt. Ltd.",
       "description": "Manufacturer, Exporter, Supplier & Service Provider of PEB structures since 2017. Founded by Md Bilal Rasheed & Rohit Verma.",
-      "ogImage": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=630&fit=crop",
+      "ogImage": "/st3.jpg",
       "heroTitle": "About Company",
       "heroSubtitle": "Established 2017 • 200+ Employees • Worldwide",
       "content": "We design industrial environments that support business growth. Customized shed design according to client requirements. Modern engineering with strong structural durability. Focus on cost efficiency and fast construction. Strict quality testing process for every structure.",
@@ -69,7 +49,7 @@
         { "number": "2017", "label": "Year Established" },
         { "number": "200+", "label": "Employees" },
         { "number": "Worldwide", "label": "Market Reach" },
-        { "number": "GST: 23ARFPV2038P1ZD", "label": "Registered" }
+        { "number": "GST", "label": "Registered" }
       ],
       "founders": ["Md Bilal Rasheed", "Rohit Verma"],
       "businessType": "Manufacturer, Exporter, Supplier, Service Provider",
@@ -99,12 +79,7 @@
           "icon": "FaIndustry",
           "description": "Factory Shed, Godown, Warehouse Shed Construction",
           "longDescription": "Complete industrial shed solutions including Factory Shed Construction, Godown Construction, Warehouse Construction, PEB Structural Sheds and Prefabricated Sheds. Customized design, manufacturing and installation.",
-          "benefits": [
-            "Custom Design",
-            "Fast Delivery",
-            "Cost Efficient",
-            "Durable"
-          ]
+          "benefits": ["Custom Design","Fast Delivery","Cost Efficient","Durable"]
         },
         {
           "id": "peb-structure-fabrication",
@@ -112,12 +87,7 @@
           "icon": "FaHammer",
           "description": "Pre Engineered Building Fabrication",
           "longDescription": "Precision fabrication of PEB structures, factory sheds, mild steel sheds, girder fabrication and steel prefab cold storage.",
-          "benefits": [
-            "High Precision",
-            "Quality Materials",
-            "ISO Standards",
-            "Traceability"
-          ]
+          "benefits": ["High Precision","Quality Materials","ISO Standards","Traceability"]
         },
         {
           "id": "prefabricated-structures",
@@ -125,12 +95,7 @@
           "icon": "FaCubes",
           "description": "Prefabricated Industrial & Commercial Buildings",
           "longDescription": "Prefabricated industrial structures, pre engineered steel buildings, school buildings and warehouse solutions.",
-          "benefits": [
-            "Rapid Assembly",
-            "Modular Design",
-            "Scalable",
-            "Reusable"
-          ]
+          "benefits": ["Rapid Assembly","Modular Design","Scalable","Reusable"]
         },
         {
           "id": "installation-services",
@@ -138,12 +103,7 @@
           "icon": "FaWrench",
           "description": "Professional PEB Installation Services",
           "longDescription": "Expert installation of pre engineered buildings with on-site supervision and quality assurance.",
-          "benefits": [
-            "Certified Teams",
-            "Safety First",
-            "Timely Completion",
-            "Full Support"
-          ]
+          "benefits": ["Certified Teams","Safety First","Timely Completion","Full Support"]
         },
         {
           "id": "design-consulting",
@@ -151,12 +111,7 @@
           "icon": "FaLightbulb",
           "description": "Specialized Design Consultancy",
           "longDescription": "Expert consulting for factory layout, warehouse design and PEB structural optimization.",
-          "benefits": [
-            "Expert Advice",
-            "Optimized Layout",
-            "Cost Savings",
-            "Compliance"
-          ]
+          "benefits": ["Expert Advice","Optimized Layout","Cost Savings","Compliance"]
         },
         {
           "id": "cold-storage-structures",
@@ -164,12 +119,7 @@
           "icon": "FaSnowflake",
           "description": "Prefabricated Cold Storage Solutions",
           "longDescription": "Steel prefab cold storage fabrication and insulated structure manufacturing.",
-          "benefits": [
-            "Thermal Efficiency",
-            "Rapid Installation",
-            "Custom Capacity",
-            "Energy Saving"
-          ]
+          "benefits": ["Thermal Efficiency","Rapid Installation","Custom Capacity","Energy Saving"]
         }
       ]
     },
@@ -186,45 +136,102 @@
           "name": "Prefabricated Factory Shed",
           "icon": "FaIndustry",
           "description": "Modular factory roofing and production sheds",
-          "features": [
-            "Mild Steel Construction",
-            "High Load Capacity",
-            "Weatherproof"
-          ]
+          "features": ["Mild Steel Construction","High Load Capacity","Weatherproof"]
         },
         {
           "id": "warehouse-shed",
           "name": "Warehouse Shed",
           "icon": "FaWarehouse",
           "description": "Industrial storage and logistics sheds",
-          "features": ["Large Span", "Panel Build", "Crane Compatible"]
+          "features": ["Large Span","Panel Build","Crane Compatible"]
         },
         {
           "id": "peb-steel-building",
           "name": "Pre Engineered Steel Building",
           "icon": "FaBuilding",
           "description": "Complete PEB solutions for commercial use",
-          "features": ["Custom Design", "Fast Construction", "Cost Effective"]
+          "features": ["Custom Design","Fast Construction","Cost Effective"]
         },
         {
           "id": "industrial-roofing-shed",
           "name": "Industrial Roofing Shed",
           "icon": "FaMountain",
           "description": "Roofing solutions for badminton courts and factories",
-          "features": ["Kirby Sheet", "Modular", "Maintenance Free"]
+          "features": ["Kirby Sheet","Modular","Maintenance Free"]
         },
         {
           "id": "prefab-school-building",
           "name": "Prefabricated School Building",
           "icon": "FaSchool",
           "description": "Quick-build educational structures",
-          "features": [
-            "Modular Classrooms",
-            "Ventilation Optimized",
-            "Earthquake Resistant"
-          ]
+          "features": ["Modular Classrooms","Ventilation Optimized","Earthquake Resistant"]
         }
       ]
+    },
+    "projects": {
+      "title": "Projects | Konstruct Technofab - PEB Portfolio",
+      "description": "Portfolio of completed PEB structures, industrial sheds and prefabricated buildings across India.",
+      "ogImage": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&h=630&fit=crop",
+      "heroTitle": "Our Projects Portfolio",
+      "heroSubtitle": "Successfully Completed PEB Installations",
+      "intro": "Proud portfolio of pre-engineered building projects showcasing our expertise in industrial sheds, warehouses, factories and specialized structures. Delivered on time with highest quality standards.",
+      "projectsList": [
+        {
+          "id": "pithampur-factory",
+          "name": "Pithampur Industrial Factory Shed",
+          "icon": "FaIndustry",
+          "description": "25,000 sq.ft factory shed with crane beam",
+          "longDescription": "Complete turnkey factory shed construction in Pithampur Industrial Area. 25,000 sq.ft covered area with 5-ton EOT crane beam, multi-bay structure and advanced roofing system. Delivered in 45 days.",
+          "image": "/st1.jpg",
+          "benefits": ["5-Ton Crane Ready","Multi-Bay Design","45-Day Completion","Weatherproof"]
+        },
+        {
+          "id": "indore-warehouse",
+          "name": "Indore Multi-span Warehouse",
+          "icon": "FaWarehouse",
+          "description": "40,000 sq.ft logistics warehouse",
+          "longDescription": "Large span warehouse facility for logistics operations in Indore. Clear span 30m, PEB structure with Kirby roofing and insulated panels. Complete with mezzanine floor.",
+          "image": "/st2.jpg",
+          "benefits": ["30m Clear Span","Insulated Panels","Mezzanine Floor","Rapid Deployment"]
+        },
+        {
+          "id": "cold-storage",
+          "name": "Madhya Pradesh Cold Storage",
+          "icon": "FaSnowflake",
+          "description": "Prefabricated cold storage structure",
+          "longDescription": "Steel prefab cold storage with PUF panels for -20°C temperature control. 10,000 sq.ft capacity with complete insulation and refrigeration piping support.",
+          "image": "/st3.jpg",
+          "benefits": ["PUF Insulation","-20°C Capability","10K sq.ft","Energy Efficient"]
+        },
+        {
+          "id": "prefab-school",
+          "name": "Prefab School Building",
+          "icon": "FaSchool",
+          "description": "Modular school building complex",
+          "longDescription": "Prefabricated school with 8 classrooms, admin block and assembly hall. Earthquake resistant design completed in 60 days for government project.",
+          "image": "/st4.jpg",
+          "benefits": ["8 Classrooms","Earthquake Safe","60-Day Build","Modular"]
+        },
+        {
+          "id": "manufacturing-unit",
+          "name": "Large-span PEB Manufacturing Unit",
+          "icon": "FaBuilding",
+          "description": "50,000 sq.ft manufacturing facility",
+          "longDescription": "High bay manufacturing unit with 12m eaves height, multiple crane beams and advanced ventilation system. Custom PEB design for heavy machinery.",
+          "image": "/st5.jpg",
+          "benefits": ["12m Eaves Height","Multi-Crane","Ventilation System","Heavy Duty"]
+        },
+        {
+          "id": "export-project",
+          "name": "Export Steel Structure Project",
+          "icon": "FaGlobeAsia",
+          "description": "International steel structure export",
+          "longDescription": "Complete steel structure exported to Middle East. Bolt-together design with sea-worthy packing. 15,000 MT project delivered through Mundra port.",
+          "image": "/st6.jpg",
+          "benefits": ["Bolt-Together","Sea-Worthy","15K MT","International"]
+        }
+      ],
+      "benefits": ["On-Time Delivery","Quality Certified","Client Satisfaction","Cost Effective"]
     },
     "contact": {
       "title": "Contact Konstruct Technofab | PEB Project Inquiries",
@@ -233,42 +240,12 @@
       "heroTitle": "Get In Touch",
       "heroSubtitle": "Ready to Start Your Project?",
       "formFields": [
-        { "name": "name", "label": "Name", "type": "text", "required": true },
-        {
-          "name": "email",
-          "label": "Email",
-          "type": "email",
-          "required": true
-        },
-        { "name": "phone", "label": "Phone", "type": "tel", "required": true },
-        {
-          "name": "serviceRequired",
-          "label": "Service Required",
-          "type": "select",
-          "required": true,
-          "options": [
-            "Industrial Shed Construction",
-            "PEB Fabrication",
-            "Warehouse Shed",
-            "Cold Storage",
-            "Consulting",
-            "Installation",
-            "Other"
-          ]
-        },
-        {
-          "name": "quantity",
-          "label": "Quantity / Size",
-          "type": "text",
-          "required": false
-        },
-        {
-          "name": "projectDetails",
-          "label": "Project Details",
-          "type": "textarea",
-          "required": true,
-          "placeholder": "Describe your requirements, location, timeline..."
-        }
+        {"name": "name", "label": "Name", "type": "text", "required": true},
+        {"name": "email", "label": "Email", "type": "email", "required": true},
+        {"name": "phone", "label": "Phone", "type": "tel", "required": true},
+        {"name": "serviceRequired", "label": "Service Required", "type": "select", "required": true, "options": ["Industrial Shed Construction","PEB Fabrication","Warehouse Shed","Cold Storage","Consulting","Installation","Other"]},
+        {"name": "quantity", "label": "Quantity / Size", "type": "text", "required": false},
+        {"name": "projectDetails", "label": "Project Details", "type": "textarea", "required": true, "placeholder": "Describe your requirements, location, timeline..."}
       ],
       "successMessage": "Thank you! We will contact you within 24 hours with project details and quote."
     }

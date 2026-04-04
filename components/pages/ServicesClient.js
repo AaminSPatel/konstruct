@@ -22,7 +22,7 @@ export default function ServicesClient() {
         description={pages.services.intro}
         ctaText="Get Quote"
         ctaLink="/contact"
-        imageUrl="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop"
+        imageUrl="/st2.jpg"
       />
 
       <article className="bg-white">

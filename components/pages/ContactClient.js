@@ -78,7 +78,7 @@ export default function ContactClient() {
         description="Have a steel shuttering or industrial formwork project in mind? Our expert team is ready to discuss your requirements and provide a customized quote. Whether you're planning a residential complex, commercial building, or critical infrastructure project, SteelForge has the expertise and capabilities to deliver precision-engineered solutions tailored to your needs."
         ctaText="Send Message"
         ctaLink="#contact-form"
-        imageUrl="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
+        imageUrl="/st6.jpg"
       />
 
       <article className="bg-white">

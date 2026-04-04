@@ -25,14 +25,25 @@ export default function AboutClient() {
         description={content}
         ctaText="Get in Touch"
         ctaLink="/contact"
-        imageUrl="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+        imageUrl="/st4.jpg"
       />
 
       <article className="bg-white">
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <ScrollReveal variant="fadeInLeft" className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
+              <ScrollReveal variant="fadeInLeft">
+                <div className="relative h-80 sm:h-96 rounded-lg overflow-hidden shadow-2xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=500&fit=crop"
+                    alt="SteelForge Manufacturing Facility"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-steel-900/30 via-transparent to-transparent"></div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal variant="fadeInRight" className="space-y-6">
                 <h2 className="text-4xl font-bold text-steel-900 mb-6">Our Journey</h2>
 
                 <p className="text-steel-700 text-lg leading-relaxed text-justify">
@@ -47,22 +58,11 @@ export default function AboutClient() {
                   Today, SteelForge operates state-of-the-art manufacturing facilities across three continents, employing over 500 skilled engineers, technicians, and craftspeople dedicated to producing world-class steel formwork systems. Our commitment to innovation has resulted in more than 47 patents covering advanced shuttering technologies, modular systems, and installation optimization methodologies.
                 </p>
               </ScrollReveal>
-
-              <ScrollReveal variant="fadeInRight">
-                <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
-                  <img
-                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=500&fit=crop"
-                    alt="SteelForge Manufacturing Facility"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-steel-900/30 via-transparent to-transparent"></div>
-                </div>
-              </ScrollReveal>
             </div>
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-r from-steel-900 to-steel-800 text-white">
+        <section className="py-20 bg-gradient-to-r from-slate-50 to-slate-100 text-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">By the Numbers</h2>
@@ -71,11 +71,11 @@ export default function AboutClient() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
               {stats.map((stat, index) => (
                 <ScrollReveal key={index} variant="scaleIn" delay={index * 0.1}>
                   <div className="text-center">
-                    <div className="text-5xl md:text-6xl font-bold text-safety-orange mb-2">
+                    <div className="text-xl sm:text-3xl md:text-4xl font-bold text-safety-orange mb-2">
                       {stat.number}
                     </div>
                     <p className="text-concrete-300 text-sm md:text-base">{stat.label}</p>

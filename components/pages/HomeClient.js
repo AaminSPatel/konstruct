@@ -27,7 +27,7 @@ export default function HomeClient() {
         description={heroDescription || "Konstruct PEB stands at the forefront of the industrial construction revolution. We specialize in high-quality Pre-Engineered Buildings (PEB), heavy structural steel fabrication, and innovative roofing solutions. Our commitment to precision engineering ensures that every structure we deliver is built for durability, scalability, and aesthetic excellence."}
         ctaText="Get Expert Consultation"
         ctaLink="/contact"
-        imageUrl={heroImage || "/st4.jpg"}
+        imageUrl={ "/st6.jpg"}
       />
 
       <article>

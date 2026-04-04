@@ -25,7 +25,7 @@ export default function AboutClient() {
         description={content}
         ctaText="Get in Touch"
         ctaLink="/contact"
-        imageUrl="/st4.jpg"
+        imageUrl="/st5.jpg"
       />
 
       <article className="bg-white">

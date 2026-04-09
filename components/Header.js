@@ -108,7 +108,7 @@ export default function Header() {
 
                 {/* Nav Links with stagger animation */}
                 <motion.ul 
-                  className="flex-1 p-6 space-y-4 pt-8"
+                  className="flex-1 p-6 space-y-4 pt-8 bg-white"
                   variants={containerVariants}
                   initial="hidden"
                   animate="visible"

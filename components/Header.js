@@ -95,7 +95,7 @@ export default function Header() {
             <SheetContent side="right" className="p-0">
               <div className="flex flex-col h-full">
                 {/* Mobile Header */}
-                <div className="p-6 border-b border-concrete-400 flex items-center gap-4">
+                <div className="p-6 border-b border-concrete-400 flex items-center gap-4 bg-white">
                   <Link href="/" className="flex-shrink-0">
                     <motion.div
                       whileHover={{ scale: 1.05 }}

@@ -5,9 +5,12 @@ import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import ContactForm from '@/components/ContactForm';
 import ScrollReveal from '@/components/ScrollReveal';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaGlobe } from 'react-icons/fa';
+import { useSite } from '@/lib/SiteContext';
 
 export default function ContactClient() {
+  const { contact } = useSite();
+  
   const formFields = [
     { name: 'name', label: 'Full Name', type: 'text', required: true },
     { name: 'email', label: 'Email Address', type: 'email', required: true },
@@ -43,28 +46,39 @@ export default function ContactClient() {
     },
   ];
 
+  const phoneDetails = contact?.phone ? contact.phone.split(' / ') : [];
+  const emailDetails = contact?.email ? contact.email.split(' / ') : [];
+  const firstPhone = phoneDetails[0] || '';
+  const firstEmail = emailDetails[0] || '';
+
   const contactInfo = [
     {
       icon: FaPhone,
       title: 'Phone',
-      details: ['+1 (800) 555-0123', '+1 (555) 234-5678'],
-      action: 'tel:+1-800-555-0123',
+      details: phoneDetails,
+      action: firstPhone ? `tel:${firstPhone.replace(/[^+\d]/g, '')}` : '#',
     },
     {
       icon: FaEnvelope,
       title: 'Email',
-      details: ['info@steelforge.com', 'projects@steelforge.com'],
-      action: 'mailto:info@steelforge.com',
+      details: emailDetails,
+      action: firstEmail ? `mailto:${firstEmail}` : '#',
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Address',
-      details: ['2847 Industrial Boulevard', 'Construction Park, IL 60601, USA'],
+      details: contact?.address ? contact.address.split(', ') : [],
     },
     {
       icon: FaClock,
       title: 'Business Hours',
-      details: ['Mon-Fri: 8:00 AM - 6:00 PM', 'Sat: 9:00 AM - 2:00 PM', 'Sun: Closed'],
+      details: contact?.hours ? [contact.hours] : [],
+    },
+    {
+      icon: FaGlobe,
+      title: 'Website',
+      details: contact?.website ? [contact.website] : [],
+      action: contact?.website || '#',
     },
   ];
 
@@ -78,7 +92,7 @@ export default function ContactClient() {
         description="Have a steel shuttering or industrial formwork project in mind? Our expert team is ready to discuss your requirements and provide a customized quote. Whether you're planning a residential complex, commercial building, or critical infrastructure project, SteelForge has the expertise and capabilities to deliver precision-engineered solutions tailored to your needs."
         ctaText="Send Message"
         ctaLink="#contact-form"
-        imageUrl="/st6.jpg"
+        imageUrl="/st7.jpg"
       />
 
       <article className="bg-white">
@@ -140,7 +154,7 @@ export default function ContactClient() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-steel-900 mb-6">Visit Us</h2>
               <p className="text-steel-700 text-lg mb-8">
-                Our headquarters is located in the heart of Construction Park, easily accessible from major highways.
+                Our headquarters in Pithampur, Indore - easily accessible from AB Road and major highways.
               </p>
             </div>
 
@@ -149,7 +163,7 @@ export default function ContactClient() {
                 <div className="text-center">
                   <FaMapMarkerAlt className="text-6xl text-safety-orange mx-auto mb-4 opacity-50" />
                   <p className="text-steel-700 font-semibold">
-                    2847 Industrial Boulevard, Construction Park, IL 60601
+                    {contact?.address || '393, Sant Nagar, Scheme No.114, AB Road, Pithampur, Indore'}
                   </p>
                   <p className="text-steel-600 text-sm mt-2">
                     Map view available - contact us for directions
@@ -224,25 +238,19 @@ export default function ContactClient() {
             '@context': 'https://schema.org',
             '@type': 'ContactPoint',
             contactType: 'Customer Service',
-            telephone: '+1-800-555-0123',
-            email: 'info@steelforge.com',
-            url: 'https://steelforge-construction.com/contact',
-            areaServed: 'Worldwide',
+            telephone: firstPhone,
+            email: firstEmail,
+            url: contact?.website || 'https://www.konstruct.co.in/contact',
+            areaServed: 'India, Worldwide',
             hoursAvailable: [
               {
                 '@type': 'OpeningHoursSpecification',
-                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-                opens: '08:00',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                opens: '09:00',
                 closes: '18:00',
               },
-              {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: 'Saturday',
-                opens: '09:00',
-                closes: '14:00',
-              },
             ],
-          }),
+          }, null, 2),
         }}
       />
     </main>

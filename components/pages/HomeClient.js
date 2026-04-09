@@ -2,12 +2,13 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import HeroSection from '@/components/HeroSection';
+import HomeHeroSection from '@/components/HomeHeroSection';
 import FeatureSection from '@/components/FeatureSection';
 import ServiceGrid from '@/components/ServiceGrid';
 import TestimonialSection from '@/components/TestimonialSection';
 import CTASection from '@/components/CTASection';
 import ScrollReveal from '@/components/ScrollReveal';
+import SwiperProjects from '@/components/SwiperProjects';
 import { useSite } from '@/lib/SiteContext';
 
 export default function HomeClient() {
@@ -21,20 +22,19 @@ export default function HomeClient() {
       <Header />
 
       {/* Hero Section with Konstruct PEB context */}
-      <HeroSection
+      <HomeHeroSection
         title={heroTitle || "India's Leading Pre-Engineered Building Manufacturers"}
         subtitle={heroSubtitle || "Konstruct PEB: Engineering the Future of Infrastructure"}
         description={heroDescription || "Konstruct PEB stands at the forefront of the industrial construction revolution. We specialize in high-quality Pre-Engineered Buildings (PEB), heavy structural steel fabrication, and innovative roofing solutions. Our commitment to precision engineering ensures that every structure we deliver is built for durability, scalability, and aesthetic excellence."}
         ctaText="Get Expert Consultation"
         ctaLink="/contact"
-        imageUrl={ "/st6.jpg"}
       />
 
       <article>
         {/* --- Brand Showcase & Detailed Content Section --- */}
-        <section className="py-24 bg-zinc-50 overflow-hidden">
+        <section className="py-32 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               
               <ScrollReveal variant="fadeInLeft">
                 <div>
@@ -57,20 +57,9 @@ export default function HomeClient() {
                 </div>
               </ScrollReveal>
 
-              {/* Modern Collage Grid */}
-              <ScrollReveal variant="fadeInRight" className="grid grid-cols-12 grid-rows-6 gap-4 h-[600px]">
-                <div className="col-span-7 row-span-4 overflow-hidden rounded-3xl shadow-2xl border-4 border-white">
-                  <img src="/st2.jpg" alt="PEB Structure 1" className="w-full h-full object-cover hover:scale-110 transition-all duration-700" />
-                </div>
-                <div className="col-span-5 row-span-3 overflow-hidden rounded-3xl shadow-2xl border-4 border-white">
-                  <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600" alt="Fabrication 2" className="w-full h-full object-cover hover:scale-110 transition-all duration-700" />
-                </div>
-                <div className="col-span-5 row-span-3 overflow-hidden rounded-3xl shadow-2xl border-4 border-white">
-                  <img src="st6.jpg" alt="Welding 3" className="w-full h-full object-cover hover:scale-110 transition-all duration-700" />
-                </div>
-                <div className="col-span-7 row-span-2 overflow-hidden rounded-3xl shadow-2xl border-4 border-white">
-                  <img src="st5.jpg" alt="Roofing 4" className="w-full h-full object-cover hover:scale-110 transition-all duration-700" />
-                </div>
+              {/* Dynamic Swiper Projects Showcase */}
+              <ScrollReveal variant="fadeInRight">
+                <SwiperProjects />
               </ScrollReveal>
             </div>
           </div>
@@ -87,9 +76,9 @@ export default function HomeClient() {
         />
 
         {/* --- Services Section --- */}
-        <section className="py-24 bg-white relative">
+        <section className="py-32 bg-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20 items-end">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-24 items-end">
               <div className="lg:col-span-2">
                 <span className="text-orange-600 font-black uppercase tracking-widest text-sm italic block mb-2">Our Capabilities</span>
                 <h2 className="text-4xl md:text-6xl font-black text-zinc-900 tracking-tighter">
@@ -103,7 +92,7 @@ export default function HomeClient() {
 
             <ServiceGrid services={previewServices} />
 
-            <div className="text-center mt-20">
+            <div className="text-center mt-24">
               <a
                 href="/services"
                 className="group relative inline-flex items-center gap-6 bg-zinc-900 text-white px-12 py-5 rounded-full font-black overflow-hidden transition-all hover:pr-16"

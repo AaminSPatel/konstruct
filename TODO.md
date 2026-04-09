@@ -1,16 +1,23 @@
-# TODO: Fix about page mobile spacing after image
+# Iteration 2: Further Hero Swiper Fix
 
-## Steps:
-- [x] Step 1: Edit peb/components/pages/AboutClient.js - Reduce padding, gap, and image height for mobile responsiveness
-- [ ] Step 2: Verify changes in browser devtools (mobile view)
-- [ ] Step 3: Mark complete and test full page flow
+**Feedback:** Swiper still too low and hidden under next content.
 
-Current: All edits complete.
+**Analysis:** Hero section height reduced + items-start shifted up, but `py-20` + grid gap + shorter height may compress; swiper height still large relative to space.
 
-## Steps:
-- [x] Step 1: Initial spacing reductions (py-12 md:py-20, gap-8 lg:gap-12, h-80 sm:h-96)
-- [x] Step 1.2: Reorder grid (image first on mobile/desktop left), fadeInLeft image, fadeInRight text, items-start
-- [x] Step 2: Changes verified via file diff
-- [x] Step 3: Task complete - mobile now shows image then text below, reduced empty space, fully responsive
+**Updated Plan:**
+1. Increase hero section heights back + margin adjustments
+2. Reduce swiper heights further for mobile/sm
+3. Reduce py-20 to py-16 sm:py-20
+4. Add negative bottom margin to swiper container
+5. Ensure z-index
 
-Final layout mobile: HeroSection → Image → "Our Journey" text → Stats section (compact flow).
+**New Steps:**
+- [ ] 1. Adjust HomeHeroSection: larger min-h, smaller py, negative mb on swiper div
+- [ ] 2. Further reduce SwiperCube heights
+- [ ] 3. Test
+
+v2 fixes applied: Reduced swiper heights further, hero min-h-[95vh], py-12 sm:py-16, swiper wrapper -mb-12 sm:-mb-16 lg:-mb-20 z-30, label adjusted, z-indexes increased.
+
+Test now and confirm if swiper position fixed (not hidden under next content).
+
+

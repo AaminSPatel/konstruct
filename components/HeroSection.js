@@ -3,7 +3,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import { FaArrowRight, FaHardHat, FaCheckCircle } from 'react-icons/fa';
+import Carousel3D from './Corousel3D';
+import RotatingGallery3D from './RotatingGallery3D';
 
 export default function HeroSection({ title, subtitle, description, ctaText = 'Get Quote', ctaLink = '/contact', imageUrl }) {
   return (
@@ -64,44 +73,66 @@ export default function HeroSection({ title, subtitle, description, ctaText = 'G
             </div>
           </motion.div>
 
-          {/* RIGHT IMAGE: Brutalist Framing */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="relative"
-          >
-            {/* The Main Image with a 'Brutalist' Frame */}
-            <div className="relative z-10 aspect-[4/5] md:aspect-square overflow-hidden border-[20px] border-zinc-800 shadow-2xl">
-              <Image
-                src={imageUrl || '/st3.jpg'}
-                alt="Konstruct PEB"
-                fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-110 hover:scale-100"
-              />
-            </div>
-
-            {/* Floating Experience Badge */}
-            <div className="absolute -top-10 -right-10 bg-orange-600 p-8 text-white z-20 hidden md:block">
-              <p className="text-5xl font-black leading-none">20+</p>
-              <p className="text-xs font-bold uppercase tracking-widest mt-2">Years of <br /> Engineering</p>
-            </div>
-
-            {/* Feature Cards Floating */}
+            {/* 3D Hero Image Carousel */}
             <motion.div 
-              animate={{ y: [0, 15, 0] }}
-              transition={{ duration: 5, repeat: Infinity }}
-              className="absolute -bottom-10 -left-10 bg-zinc-900 border border-zinc-700 p-6 z-20 shadow-2xl max-w-[250px]"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              className="relative "
             >
-              <div className="flex items-start gap-4">
-                <FaHardHat className="text-3xl text-orange-500 shrink-0" />
-                <div>
-                  <p className="text-white font-black text-sm uppercase">Safety First</p>
-                  <p className="text-zinc-500 text-xs mt-1">Zero-accident record across 500+ sites.</p>
-                </div>
+              <Carousel
+                opts={{
+                  align: 'start',
+                  loop: true,
+                }}
+                className="w-full max-w-sm perspective-1200"
+              >
+                <CarouselContent className="-ml-1 carousel-3d-container">
+                  {[
+                    '/st1.jpg',
+                    '/st2.jpg',
+                    '/st3.jpg',
+                    '/st4.jpg',
+                    '/st5.jpg',
+                    '/st6.jpg'
+                  ].map((src, index) => (
+                    <CarouselItem key={index} className="carousel-3d-item pl-1 md:basis-1/1 lg:basis-1/1 basis-1/1">
+                      <div className="relative aspect-[4/5] md:aspect-square overflow-hidden border-[20px] border-zinc-800 shadow-2xl p-2">
+                        <Image
+                          src={src}
+                          alt={`Konstruct PEB ${index + 1}`}
+                          fill
+                          className="object-cover hover:grayscale-0 transition-all duration-1000 scale-110 hover:scale-100 rounded-lg"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="bg-zinc-800 border-zinc-700 text-white h-12 w-12 rounded-full" />
+                <CarouselNext className="bg-zinc-800 border-zinc-700 text-white h-12 w-12 rounded-full" />
+              </Carousel>
+
+              {/* Floating Experience Badge */}
+              <div className="absolute -top-10 -right-10 bg-orange-600 p-8 text-white z-20 hidden md:block">
+                <p className="text-5xl font-black leading-none">20+</p>
+                <p className="text-xs font-bold uppercase tracking-widest mt-2">Years of <br /> Engineering</p>
               </div>
+
+              {/* Feature Cards Floating */}
+              <motion.div 
+                animate={{ y: [0, 15, 0] }}
+                transition={{ duration: 5, repeat: Infinity }}
+                className="absolute -bottom-10 -left-10 bg-zinc-900 border border-zinc-700 p-6 z-20 shadow-2xl max-w-[250px]"
+              >
+                <div className="flex items-start gap-4">
+                  <FaHardHat className="text-3xl text-orange-500 shrink-0" />
+                  <div>
+                    <p className="text-white font-black text-sm uppercase">Safety First</p>
+                    <p className="text-zinc-500 text-xs mt-1">Zero-accident record across 500+ sites.</p>
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
 
         </div>
       </div>

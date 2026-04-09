@@ -1,0 +1,92 @@
+/* Swiper Coverflow/Cube Styles - Scoped for Konstruct PEB (no global overrides) */
+
+.swiper-wrapper {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 250px;
+  opacity: 0.8;
+  border-radius: 1.5rem;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ /*  border-radius: 1.5rem; */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.swiper-slide-active img {
+  opacity: 1 !important;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+}
+
+/* Coverflow specific */
+.mySwiperCoverflow {
+  height: 90%;
+}
+
+.swiper-slide-cover {
+  width: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+}
+
+/* Cube specific */
+.mySwiperCube {
+  height: 100%;
+}
+
+.swiper-slide-cube .swiper-slide-shadow-left,
+.swiper-slide-cube .swiper-slide-shadow-right {
+  z-index: 0;
+  background-image: none;
+  box-shadow: 0 0 30px #00000080;
+}
+
+.swiper-img {
+  border-radius: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
+  
+  .swiper-slide {
+    width: 250px;
+    height: 250px;
+    border-radius: 1.5rem;
+  }
+}
+
+/* Pagination bullets theme */
+.swiper-pagination-bullet {
+  background: rgba(255, 107, 53, 0.5);
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff6b35;
+  opacity: 1;
+}
